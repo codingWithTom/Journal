@@ -12,6 +12,7 @@ struct JournalApp: App {
   
   init() {
     JournalServiceAdapter.shared.retrieveData()
+    PhotosServiceAdapter.shared.initializeDirectory()
   }
   
   var body: some Scene {

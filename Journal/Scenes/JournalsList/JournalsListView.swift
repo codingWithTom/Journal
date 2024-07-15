@@ -23,6 +23,7 @@ struct JournalsListView: View {
         }
         addButton
       }
+      .navigationDestination(for: Journal.self, destination: { JournalEntryView(journal: $0) })
     }
   }
   
@@ -33,13 +34,15 @@ struct JournalsListView: View {
                                   count: 3),
               spacing: 20) {
       ForEach(Array(viewModel.journals.enumerated()), id: \.1.id) { (index, journal) in
-        RoundedRectangle(cornerRadius: 20)
-          .fill(colors[index % colors.count])
-          .frame(height: 90)
-          .overlay(
-            RoundedRectangle(cornerRadius: 20)
-              .stroke(Color.black, lineWidth: 2)
-          )
+        NavigationLink(value: journal) {
+          RoundedRectangle(cornerRadius: 20)
+            .fill(colors[index % colors.count])
+            .frame(height: 90)
+            .overlay(
+              RoundedRectangle(cornerRadius: 20)
+                .stroke(Color.black, lineWidth: 2)
+            )
+        }
       }
     }
   }
