@@ -11,7 +11,6 @@ import Combine
 @MainActor
 final class JournalsListViewModel: ObservableObject {
   @Published var journals: [Journal] = []
-  @Published var isPresentingCamera: Bool = false
   
   struct Dependencies {
     var journalsService: JournalService = JournalServiceAdapter.shared
@@ -28,9 +27,9 @@ final class JournalsListViewModel: ObservableObject {
   func createJournal() {
     dependencies.journalsService.saveJournal(Journal())
   }
-  
+   
   func tappedCameraButton() {
-    isPresentingCamera = true
+    RoutingServiceAdapter.shared.isPresentingCamera = true
   }
 }
 

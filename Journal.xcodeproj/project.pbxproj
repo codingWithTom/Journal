@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 60;
+	objectVersion = 70;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -13,6 +13,11 @@
 		40A30F0F2C41DD4F00BA8F60 /* JournalEntryViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40A30F0E2C41DD4F00BA8F60 /* JournalEntryViewModel.swift */; };
 		40A30F112C41DD7700BA8F60 /* JournalEntryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40A30F102C41DD7700BA8F60 /* JournalEntryView.swift */; };
 		40A30F132C41E0ED00BA8F60 /* PhotosService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40A30F122C41E0ED00BA8F60 /* PhotosService.swift */; };
+		40C94A202C6AB21D0001B1EB /* WidgetKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 40F750D32C66C4D20080C7E8 /* WidgetKit.framework */; };
+		40C94A212C6AB21D0001B1EB /* SwiftUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 40F750D52C66C4D20080C7E8 /* SwiftUI.framework */; };
+		40C94A302C6AB21F0001B1EB /* JournalWidgetsExtension.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = 40C94A1F2C6AB21D0001B1EB /* JournalWidgetsExtension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		40C94A502C6AB49D0001B1EB /* RoutingService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40C94A4F2C6AB49D0001B1EB /* RoutingService.swift */; };
+		40C94A512C6AB5240001B1EB /* RoutingService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40C94A4F2C6AB49D0001B1EB /* RoutingService.swift */; };
 		40EDDEAD2C385C3B00BA0CB7 /* JournalApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40EDDEAC2C385C3B00BA0CB7 /* JournalApp.swift */; };
 		40EDDEB12C385C3D00BA0CB7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 40EDDEB02C385C3D00BA0CB7 /* Assets.xcassets */; };
 		40EDDEB42C385C3D00BA0CB7 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 40EDDEB32C385C3D00BA0CB7 /* Preview Assets.xcassets */; };
@@ -26,6 +31,13 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
+		40C94A2E2C6AB21F0001B1EB /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 40EDDEA12C385C3B00BA0CB7 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 40C94A1E2C6AB21D0001B1EB;
+			remoteInfo = JournalWidgetsExtension;
+		};
 		40EDDEBA2C385C3D00BA0CB7 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 40EDDEA12C385C3B00BA0CB7 /* Project object */;
@@ -49,6 +61,7 @@
 			dstPath = "";
 			dstSubfolderSpec = 13;
 			files = (
+				40C94A302C6AB21F0001B1EB /* JournalWidgetsExtension.appex in Embed Foundation Extensions */,
 			);
 			name = "Embed Foundation Extensions";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -62,6 +75,8 @@
 		40A30F0E2C41DD4F00BA8F60 /* JournalEntryViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JournalEntryViewModel.swift; sourceTree = "<group>"; };
 		40A30F102C41DD7700BA8F60 /* JournalEntryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JournalEntryView.swift; sourceTree = "<group>"; };
 		40A30F122C41E0ED00BA8F60 /* PhotosService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotosService.swift; sourceTree = "<group>"; };
+		40C94A1F2C6AB21D0001B1EB /* JournalWidgetsExtension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = JournalWidgetsExtension.appex; sourceTree = BUILT_PRODUCTS_DIR; };
+		40C94A4F2C6AB49D0001B1EB /* RoutingService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoutingService.swift; sourceTree = "<group>"; };
 		40EDDEA92C385C3B00BA0CB7 /* Journal.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Journal.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		40EDDEAC2C385C3B00BA0CB7 /* JournalApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JournalApp.swift; sourceTree = "<group>"; };
 		40EDDEB02C385C3D00BA0CB7 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -79,7 +94,38 @@
 		40F750D52C66C4D20080C7E8 /* SwiftUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftUI.framework; path = System/Library/Frameworks/SwiftUI.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
+/* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
+		40C94A332C6AB21F0001B1EB /* PBXFileSystemSynchronizedBuildFileExceptionSet */ = {
+			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
+			membershipExceptions = (
+				Info.plist,
+			);
+			target = 40C94A1E2C6AB21D0001B1EB /* JournalWidgetsExtension */;
+		};
+		40C94A4D2C6AB4500001B1EB /* PBXFileSystemSynchronizedBuildFileExceptionSet */ = {
+			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
+			membershipExceptions = (
+				CameraCaptureIntent.swift,
+				JournalWidgetsControl.swift,
+			);
+			target = 40EDDEA82C385C3B00BA0CB7 /* Journal */;
+		};
+/* End PBXFileSystemSynchronizedBuildFileExceptionSet section */
+
+/* Begin PBXFileSystemSynchronizedRootGroup section */
+		40C94A222C6AB21D0001B1EB /* JournalWidgets */ = {isa = PBXFileSystemSynchronizedRootGroup; exceptions = (40C94A4D2C6AB4500001B1EB /* PBXFileSystemSynchronizedBuildFileExceptionSet */, 40C94A332C6AB21F0001B1EB /* PBXFileSystemSynchronizedBuildFileExceptionSet */, ); explicitFileTypes = {}; explicitFolders = (); path = JournalWidgets; sourceTree = "<group>"; };
+/* End PBXFileSystemSynchronizedRootGroup section */
+
 /* Begin PBXFrameworksBuildPhase section */
+		40C94A1C2C6AB21D0001B1EB /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				40C94A212C6AB21D0001B1EB /* SwiftUI.framework in Frameworks */,
+				40C94A202C6AB21D0001B1EB /* WidgetKit.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		40EDDEA62C385C3B00BA0CB7 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -129,6 +175,7 @@
 				40EDDEAB2C385C3B00BA0CB7 /* Journal */,
 				40EDDEBC2C385C3D00BA0CB7 /* JournalTests */,
 				40EDDEC62C385C3D00BA0CB7 /* JournalUITests */,
+				40C94A222C6AB21D0001B1EB /* JournalWidgets */,
 				40F750D22C66C4D20080C7E8 /* Frameworks */,
 				40EDDEAA2C385C3B00BA0CB7 /* Products */,
 			);
@@ -140,6 +187,7 @@
 				40EDDEA92C385C3B00BA0CB7 /* Journal.app */,
 				40EDDEB92C385C3D00BA0CB7 /* JournalTests.xctest */,
 				40EDDEC32C385C3D00BA0CB7 /* JournalUITests.xctest */,
+				40C94A1F2C6AB21D0001B1EB /* JournalWidgetsExtension.appex */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -187,6 +235,7 @@
 			children = (
 				40EDDED72C385D4000BA0CB7 /* JournalService.swift */,
 				40A30F122C41E0ED00BA8F60 /* PhotosService.swift */,
+				40C94A4F2C6AB49D0001B1EB /* RoutingService.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -230,6 +279,28 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		40C94A1E2C6AB21D0001B1EB /* JournalWidgetsExtension */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 40C94A342C6AB21F0001B1EB /* Build configuration list for PBXNativeTarget "JournalWidgetsExtension" */;
+			buildPhases = (
+				40C94A1B2C6AB21D0001B1EB /* Sources */,
+				40C94A1C2C6AB21D0001B1EB /* Frameworks */,
+				40C94A1D2C6AB21D0001B1EB /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			fileSystemSynchronizedGroups = (
+				40C94A222C6AB21D0001B1EB /* JournalWidgets */,
+			);
+			name = JournalWidgetsExtension;
+			packageProductDependencies = (
+			);
+			productName = JournalWidgetsExtension;
+			productReference = 40C94A1F2C6AB21D0001B1EB /* JournalWidgetsExtension.appex */;
+			productType = "com.apple.product-type.app-extension";
+		};
 		40EDDEA82C385C3B00BA0CB7 /* Journal */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 40EDDECD2C385C3D00BA0CB7 /* Build configuration list for PBXNativeTarget "Journal" */;
@@ -242,6 +313,7 @@
 			buildRules = (
 			);
 			dependencies = (
+				40C94A2F2C6AB21F0001B1EB /* PBXTargetDependency */,
 			);
 			name = Journal;
 			productName = Journal;
@@ -294,6 +366,9 @@
 				LastSwiftUpdateCheck = 1600;
 				LastUpgradeCheck = 1600;
 				TargetAttributes = {
+					40C94A1E2C6AB21D0001B1EB = {
+						CreatedOnToolsVersion = 16.0;
+					};
 					40EDDEA82C385C3B00BA0CB7 = {
 						CreatedOnToolsVersion = 16.0;
 					};
@@ -323,11 +398,19 @@
 				40EDDEA82C385C3B00BA0CB7 /* Journal */,
 				40EDDEB82C385C3D00BA0CB7 /* JournalTests */,
 				40EDDEC22C385C3D00BA0CB7 /* JournalUITests */,
+				40C94A1E2C6AB21D0001B1EB /* JournalWidgetsExtension */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		40C94A1D2C6AB21D0001B1EB /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		40EDDEA72C385C3B00BA0CB7 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -354,6 +437,14 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		40C94A1B2C6AB21D0001B1EB /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				40C94A512C6AB5240001B1EB /* RoutingService.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		40EDDEA52C385C3B00BA0CB7 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -367,6 +458,7 @@
 				40EDDEDB2C385D5D00BA0CB7 /* Journal.swift in Sources */,
 				40A30F112C41DD7700BA8F60 /* JournalEntryView.swift in Sources */,
 				404B4ABC2C644691000BD643 /* JournalCameraCaptureView.swift in Sources */,
+				40C94A502C6AB49D0001B1EB /* RoutingService.swift in Sources */,
 				404B4ABE2C6447AC000BD643 /* JournalCameraCaptureViewModel.swift in Sources */,
 				40A30F0F2C41DD4F00BA8F60 /* JournalEntryViewModel.swift in Sources */,
 			);
@@ -392,6 +484,11 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
+		40C94A2F2C6AB21F0001B1EB /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 40C94A1E2C6AB21D0001B1EB /* JournalWidgetsExtension */;
+			targetProxy = 40C94A2E2C6AB21F0001B1EB /* PBXContainerItemProxy */;
+		};
 		40EDDEBB2C385C3D00BA0CB7 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = 40EDDEA82C385C3B00BA0CB7 /* Journal */;
@@ -405,6 +502,60 @@
 /* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
+		40C94A312C6AB21F0001B1EB /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_WIDGET_BACKGROUND_COLOR_NAME = WidgetBackground;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = SP7M63P6TC;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = JournalWidgets/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = JournalWidgets;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.CodingWithTom.Journal.JournalWidgets;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		40C94A322C6AB21F0001B1EB /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_WIDGET_BACKGROUND_COLOR_NAME = WidgetBackground;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = SP7M63P6TC;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = JournalWidgets/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = JournalWidgets;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.CodingWithTom.Journal.JournalWidgets;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
 		40EDDECB2C385C3D00BA0CB7 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -659,6 +810,15 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		40C94A342C6AB21F0001B1EB /* Build configuration list for PBXNativeTarget "JournalWidgetsExtension" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				40C94A312C6AB21F0001B1EB /* Debug */,
+				40C94A322C6AB21F0001B1EB /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		40EDDEA42C385C3B00BA0CB7 /* Build configuration list for PBXProject "Journal" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
