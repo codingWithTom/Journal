@@ -8,14 +8,26 @@
 import SwiftUI
 
 struct JournalsListView: View {
-  @StateObject private var viewModel = JournalsListViewModel()
+  @StateObject var viewModel = JournalsListViewModel()
+  
   var body: some View {
     NavigationStack {
       ZStack {
         ScrollView {
           VStack(spacing: 20) {
-            Text("Your journey")
-              .font(.largeTitle)
+            HStack {
+              Text("Your journey")
+                .font(.largeTitle)
+              Spacer()
+              Button(action: { viewModel.tappedCameraButton() }) {
+                ZStack {
+                  Image(systemName: "book.pages.fill")
+                    .offset(x: -10, y: -10)
+                  Image(systemName: "camera.fill")
+                    .offset(x: 10, y: 10)
+                }
+              }
+            }
             journals
             Spacer()
           }
@@ -24,6 +36,9 @@ struct JournalsListView: View {
         addButton
       }
       .navigationDestination(for: Journal.self, destination: { JournalEntryView(journal: $0) })
+      .sheet(isPresented: $viewModel.isPresentingCamera) {
+        JournalCameraCaptureView(isPresenting: $viewModel.isPresentingCamera)
+      }
     }
   }
   
