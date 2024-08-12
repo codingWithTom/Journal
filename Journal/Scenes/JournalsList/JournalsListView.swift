@@ -9,8 +9,10 @@ import SwiftUI
 
 struct JournalsListView: View {
   @StateObject var viewModel = JournalsListViewModel()
+  @Environment(RoutingServiceAdapter.self) private var routingService
   
   var body: some View {
+    @Bindable var routingService = self.routingService
     NavigationStack {
       ZStack {
         ScrollView {
@@ -36,8 +38,8 @@ struct JournalsListView: View {
         addButton
       }
       .navigationDestination(for: Journal.self, destination: { JournalEntryView(journal: $0) })
-      .sheet(isPresented: $viewModel.isPresentingCamera) {
-        JournalCameraCaptureView(isPresenting: $viewModel.isPresentingCamera)
+      .sheet(isPresented: $routingService.isPresentingCamera) {
+        JournalCameraCaptureView(isPresenting: $routingService.isPresentingCamera)
       }
     }
   }
