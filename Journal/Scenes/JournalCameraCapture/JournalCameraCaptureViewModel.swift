@@ -58,7 +58,7 @@ final class JournalCameraCaptureViewModel: NSObject, ObservableObject {
     }
     let names = await photoNamesActor.values
     var journal = Journal()
-    journal.images = names
+    journal.images = names.map { JournalImage(name: $0) }
     dependencies.journalService.saveJournal(journal)
     isPresenting = false
   }

@@ -10,6 +10,7 @@
 		404B4ABC2C644691000BD643 /* JournalCameraCaptureView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 404B4ABB2C644691000BD643 /* JournalCameraCaptureView.swift */; };
 		404B4ABE2C6447AC000BD643 /* JournalCameraCaptureViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 404B4ABD2C6447AC000BD643 /* JournalCameraCaptureViewModel.swift */; };
 		404B4AC02C644AAB000BD643 /* CameraPreviewRepresentable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 404B4ABF2C644AAB000BD643 /* CameraPreviewRepresentable.swift */; };
+		40993ABC2C77AB660093C44E /* JournalPhotosContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40993ABB2C77AB660093C44E /* JournalPhotosContainer.swift */; };
 		40A30F0F2C41DD4F00BA8F60 /* JournalEntryViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40A30F0E2C41DD4F00BA8F60 /* JournalEntryViewModel.swift */; };
 		40A30F112C41DD7700BA8F60 /* JournalEntryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40A30F102C41DD7700BA8F60 /* JournalEntryView.swift */; };
 		40A30F132C41E0ED00BA8F60 /* PhotosService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40A30F122C41E0ED00BA8F60 /* PhotosService.swift */; };
@@ -18,6 +19,8 @@
 		40C94A302C6AB21F0001B1EB /* JournalWidgetsExtension.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = 40C94A1F2C6AB21D0001B1EB /* JournalWidgetsExtension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		40C94A502C6AB49D0001B1EB /* RoutingService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40C94A4F2C6AB49D0001B1EB /* RoutingService.swift */; };
 		40C94A512C6AB5240001B1EB /* RoutingService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40C94A4F2C6AB49D0001B1EB /* RoutingService.swift */; };
+		40CFF5622C77A4EB007EA6DC /* JournalImageEditorViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40CFF5612C77A4EB007EA6DC /* JournalImageEditorViewModel.swift */; };
+		40CFF5642C77A558007EA6DC /* JournalImageEditorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40CFF5632C77A558007EA6DC /* JournalImageEditorView.swift */; };
 		40EDDEAD2C385C3B00BA0CB7 /* JournalApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40EDDEAC2C385C3B00BA0CB7 /* JournalApp.swift */; };
 		40EDDEB12C385C3D00BA0CB7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 40EDDEB02C385C3D00BA0CB7 /* Assets.xcassets */; };
 		40EDDEB42C385C3D00BA0CB7 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 40EDDEB32C385C3D00BA0CB7 /* Preview Assets.xcassets */; };
@@ -72,11 +75,14 @@
 		404B4ABB2C644691000BD643 /* JournalCameraCaptureView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JournalCameraCaptureView.swift; sourceTree = "<group>"; };
 		404B4ABD2C6447AC000BD643 /* JournalCameraCaptureViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JournalCameraCaptureViewModel.swift; sourceTree = "<group>"; };
 		404B4ABF2C644AAB000BD643 /* CameraPreviewRepresentable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraPreviewRepresentable.swift; sourceTree = "<group>"; };
+		40993ABB2C77AB660093C44E /* JournalPhotosContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JournalPhotosContainer.swift; sourceTree = "<group>"; };
 		40A30F0E2C41DD4F00BA8F60 /* JournalEntryViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JournalEntryViewModel.swift; sourceTree = "<group>"; };
 		40A30F102C41DD7700BA8F60 /* JournalEntryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JournalEntryView.swift; sourceTree = "<group>"; };
 		40A30F122C41E0ED00BA8F60 /* PhotosService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotosService.swift; sourceTree = "<group>"; };
 		40C94A1F2C6AB21D0001B1EB /* JournalWidgetsExtension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = JournalWidgetsExtension.appex; sourceTree = BUILT_PRODUCTS_DIR; };
 		40C94A4F2C6AB49D0001B1EB /* RoutingService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoutingService.swift; sourceTree = "<group>"; };
+		40CFF5612C77A4EB007EA6DC /* JournalImageEditorViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JournalImageEditorViewModel.swift; sourceTree = "<group>"; };
+		40CFF5632C77A558007EA6DC /* JournalImageEditorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JournalImageEditorView.swift; sourceTree = "<group>"; };
 		40EDDEA92C385C3B00BA0CB7 /* Journal.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Journal.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		40EDDEAC2C385C3B00BA0CB7 /* JournalApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JournalApp.swift; sourceTree = "<group>"; };
 		40EDDEB02C385C3D00BA0CB7 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -165,8 +171,18 @@
 			children = (
 				40A30F0E2C41DD4F00BA8F60 /* JournalEntryViewModel.swift */,
 				40A30F102C41DD7700BA8F60 /* JournalEntryView.swift */,
+				40993ABB2C77AB660093C44E /* JournalPhotosContainer.swift */,
 			);
 			path = JorunalEntry;
+			sourceTree = "<group>";
+		};
+		40CFF5602C77A4E1007EA6DC /* JournalImageEditor */ = {
+			isa = PBXGroup;
+			children = (
+				40CFF5612C77A4EB007EA6DC /* JournalImageEditorViewModel.swift */,
+				40CFF5632C77A558007EA6DC /* JournalImageEditorView.swift */,
+			);
+			path = JournalImageEditor;
 			sourceTree = "<group>";
 		};
 		40EDDEA02C385C3B00BA0CB7 = {
@@ -251,6 +267,7 @@
 		40EDDEDC2C3865AD00BA0CB7 /* Scenes */ = {
 			isa = PBXGroup;
 			children = (
+				40CFF5602C77A4E1007EA6DC /* JournalImageEditor */,
 				404B4AB82C644679000BD643 /* JournalCameraCapture */,
 				40A30F0D2C41DD4300BA8F60 /* JorunalEntry */,
 				40EDDEDD2C3865BA00BA0CB7 /* JournalsList */,
@@ -453,6 +470,8 @@
 				40EDDED82C385D4000BA0CB7 /* JournalService.swift in Sources */,
 				404B4AC02C644AAB000BD643 /* CameraPreviewRepresentable.swift in Sources */,
 				40EDDEAD2C385C3B00BA0CB7 /* JournalApp.swift in Sources */,
+				40CFF5622C77A4EB007EA6DC /* JournalImageEditorViewModel.swift in Sources */,
+				40CFF5642C77A558007EA6DC /* JournalImageEditorView.swift in Sources */,
 				40EDDEDF2C3865C900BA0CB7 /* JournalsListView.swift in Sources */,
 				40A30F132C41E0ED00BA8F60 /* PhotosService.swift in Sources */,
 				40EDDEDB2C385D5D00BA0CB7 /* Journal.swift in Sources */,
@@ -460,6 +479,7 @@
 				404B4ABC2C644691000BD643 /* JournalCameraCaptureView.swift in Sources */,
 				40C94A502C6AB49D0001B1EB /* RoutingService.swift in Sources */,
 				404B4ABE2C6447AC000BD643 /* JournalCameraCaptureViewModel.swift in Sources */,
+				40993ABC2C77AB660093C44E /* JournalPhotosContainer.swift in Sources */,
 				40A30F0F2C41DD4F00BA8F60 /* JournalEntryViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -683,7 +703,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"Journal/Preview Content\"";
-				DEVELOPMENT_TEAM = SP7M63P6TC;
+				DEVELOPMENT_TEAM = "";
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_NSCameraUsageDescription = "This app uses the camera to add photos to your journal entries";
@@ -713,7 +733,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"Journal/Preview Content\"";
-				DEVELOPMENT_TEAM = SP7M63P6TC;
+				DEVELOPMENT_TEAM = "";
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_NSCameraUsageDescription = "This app uses the camera to add photos to your journal entries";

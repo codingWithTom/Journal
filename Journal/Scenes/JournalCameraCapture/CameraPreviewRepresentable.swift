@@ -8,12 +8,20 @@
 import SwiftUI
 import UIKit
 import AVFoundation
+import AVKit
 
 struct CameraPreviewRepresentable: UIViewRepresentable {
   let session: AVCaptureSession
+  let onCapture: () -> Void
   
   func makeUIView(context: Context) -> CameraPreviewView {
-    CameraPreviewView()
+    let view = CameraPreviewView()
+    view.addInteraction(AVCaptureEventInteraction {
+      if $0.phase == .ended {
+        self.onCapture()
+      }
+    })
+    return view
   }
   
   func updateUIView(_ uiView: CameraPreviewView, context: Context) {
