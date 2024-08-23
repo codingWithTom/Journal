@@ -12,6 +12,7 @@ protocol JournalService {
   var journalsResource: AnyPublisher<[Journal], Never> { get }
   func saveJournal(_: Journal)
   func retrieveData()
+  func getExistingCategories() -> [String]
 }
 
 final class JournalServiceAdapter: JournalService {
@@ -46,6 +47,11 @@ final class JournalServiceAdapter: JournalService {
     } else {
       self.journals = []
     }
+  }
+  
+  func getExistingCategories() -> [String] {
+    let categories = journals.flatMap { journal in journal.images.compactMap { $0.category } }
+    return Array(Set(categories))
   }
 }
 

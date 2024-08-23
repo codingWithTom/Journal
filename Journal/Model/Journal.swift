@@ -10,7 +10,12 @@ import Foundation
 struct Journal: Codable, Hashable {
   let id: UUID
   let text: String
-  var images: [String]
+  var images: [JournalImage]
+}
+
+struct JournalImage: Codable, Hashable {
+  let name: String
+  var category: String?
 }
 
 extension Journal {

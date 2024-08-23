@@ -11,7 +11,7 @@ import PhotosUI
 
 enum PhotosState {
   case loading
-  case content([UIImage])
+  case content([(String?, [(UIImage, JournalImage)])])
 }
 
 @MainActor
@@ -30,6 +30,7 @@ final class JournalEntryViewModel: ObservableObject {
     }
     return journal.text
   }
+  @Published var editorViewModel: JournalImageEditorViewModel?
   @Published var photosState: PhotosState = .loading
   @Published var selectedPhotos: [PhotosPickerItem] = [] {
     didSet {
@@ -43,29 +44,45 @@ final class JournalEntryViewModel: ObservableObject {
     self.dependencies = dependencies
     Task { await loadPhotos() }
   }
+  
+  func tappedImage(withJournalImage journalImage: JournalImage) {
+    guard let index = journal.images.firstIndex(where: { $0.name == journalImage.name }) else { return }
+    let journalImage = journal.images[index]
+    let existingCateories = dependencies.journalService.getExistingCategories()
+    editorViewModel = JournalImageEditorViewModel(
+      journalImage: journalImage, existingCategories: existingCateories
+    ) { [weak self] in
+      guard var journal = self?.journal else { return }
+      journal.images[index] = $0
+      self?.dependencies.journalService.saveJournal(journal)
+      self?.journal = journal
+      self?.editorViewModel = nil
+    }
+  }
 }
 
 private extension JournalEntryViewModel {
   func loadPhotos() async {
-    let photoNames = self.journal.images
-    let imagesActor = CollectionActor<UIImage>()
+    let photoImages = self.journal.images
+    let imagesActor = CollectionActor<(UIImage, JournalImage)>()
     await withTaskGroup(of: Void.self) { group in
-      photoNames.forEach { photoName in
+      photoImages.forEach { journalPhoto in
         group.addTask {
-          let url = await self.dependencies.photosService.getURL(forName: photoName)
+          let url = await self.dependencies.photosService.getURL(forName: journalPhoto.name)
           guard
             let data = try? Data(contentsOf: url),
             let image = UIImage(data: data)
           else {
             return
           }
-          await imagesActor.addValue(image)
+          await imagesActor.addValue((image, journalPhoto))
         }
       }
     }
     let images = await imagesActor.values
+    let imagesWithCategory = images.group(by: \.1.category)
     Task { @MainActor in
-      photosState = .content(images)
+      photosState = .content(imagesWithCategory.map { ($0.0, $0.1) })
     }
   }
   
@@ -80,7 +97,8 @@ private extension JournalEntryViewModel {
       }
     }
     let names = await photoNamesActor.values
-    journal.images = journal.images + names
+    let journalImages = names.map { JournalImage(name: $0) }
+    journal.images = journal.images + journalImages
     dependencies.journalService.saveJournal(journal)
     await loadPhotos()
   }
@@ -115,4 +133,21 @@ actor CollectionActor<T> {
   func addValue(_ value: T) {
     values.append(value)
   }
+}
+
+extension Array {
+  func group<Value: Hashable>(
+    by keypath: KeyPath<Element, Value>) -> [(Value, [Element])] {
+      var groups: [Value: [Element]] = [:]
+      for element in self {
+        let value = element[keyPath: keypath]
+        if let group = groups[value] {
+          groups[value] = group + [element]
+        } else {
+          groups[value] = [element]
+        }
+      }
+      
+      return groups.map { key, value in (key, value)}
+    }
 }

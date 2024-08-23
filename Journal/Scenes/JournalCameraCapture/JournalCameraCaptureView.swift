@@ -21,7 +21,9 @@ struct JournalCameraCaptureView: View {
           .frame(width: 50, height: 50)
       }
       Text("Take pictures that you want on your entry")
-      CameraPreviewRepresentable(session: viewModel.cameraSession)
+      CameraPreviewRepresentable(session: viewModel.cameraSession) {
+        viewModel.takePicture()
+      }
       if viewModel.isLoading {
         ProgressView()
       } else {
